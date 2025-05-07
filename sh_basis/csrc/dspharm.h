@@ -33,8 +33,8 @@ py::array_t<double> dspharm(
     bool internal,
     int mmax
 ) {
-    const int N = lmax*(lmax+2);
-    int I = z.shape(1);
+    const py::size_t N = lmax*(lmax+2);
+    py::size_t I = z.shape(1);
 
     auto result = py::array_t<double>(N * 3*I);
 
